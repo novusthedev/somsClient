@@ -8,17 +8,29 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <SupportedOSPlatformVersion>8.0</SupportedOSPlatformVersion>
     <AssemblyName>somsClient</AssemblyName>
-    <Version>1.3.1</Version>
-    <Description>soms Client is a Minecraft java client that lets you hop into the server right away!</Description>
+    <Version>1.4</Version>
+    <Description>soms Client is a good to use lightweight Minecraft client / launcher for Windows 8.1/10/11.
+soms Client supports a range of computers from older low end devices to newer high end ones.
+
+soms Client is free and open source, so fork it and create your own launcher!
+https://github.com/novusthedev/somsClient</Description>
     <PackageIcon>moanskull.png</PackageIcon>
     <PackageReleaseNotes>updated the ui to include the homepage for the soms server and many bug fixes!</PackageReleaseNotes>
     <PlatformTarget>x86</PlatformTarget>
     <BaseOutputPath>I:\Users\Novus\Documents\somsClient</BaseOutputPath>
     <Platforms>AnyCPU;x86;x64</Platforms>
-    <Company>colebolebole / NovusOh</Company>
+    <Company>soms Staff Team</Company>
     <PackageProjectUrl>https://github.com/novusthedev/somsClient</PackageProjectUrl>
     <RepositoryUrl>https://github.com/novusthedev/somsClient</RepositoryUrl>
+    <Product>soms Client</Product>
+    <Copyright>(C) 2022 NovusOh. This program is licensed under the MIT license.</Copyright>
+    <Authors>NovusOh</Authors>
+    <ApplicationIcon>somslogo.ico</ApplicationIcon>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="somslogo.ico" />
+  </ItemGroup>
 
   <ItemGroup>
     <None Include="..\..\..\..\Downloads\moanskull.png">

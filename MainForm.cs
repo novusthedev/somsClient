@@ -281,7 +281,6 @@ namespace CmlLibWinFormSample
             groupBox1.Enabled = value;
             groupBox2.Enabled = value;
             groupBox3.Enabled = value;
-            groupBox4.Enabled = value;
         }
 
         private void StartProcess(Process process)
@@ -315,9 +314,7 @@ namespace CmlLibWinFormSample
 
         private void btnChangelog_Click(object sender, EventArgs e)
         {
-            // Game Changelog
-            var f = new ChangeLog();
-            f.Show();
+            
         }
 
         private void btnOptions_Click(object sender, EventArgs e)
@@ -376,9 +373,7 @@ namespace CmlLibWinFormSample
 
         private void button1_Click(object sender, EventArgs e)
         {
-            // aboutform1
-            var f = new AboutBox1();
-            f.Show();
+            
         }
 
         private void label21_Click(object sender, EventArgs e)
@@ -394,6 +389,84 @@ namespace CmlLibWinFormSample
         private void button2_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void materialButton1_Click(object sender, EventArgs e)
+        {
+            // aboutform1
+            var f = new AboutBox1();
+            f.Show();
+        }
+
+        private void Changelogs_Click(object sender, EventArgs e)
+        {
+            // Game Changelog
+            var f = new ChangeLog();
+            f.Show();
+        }
+
+        private async void materialButton2_Click(object sender, EventArgs e)
+        {
+            await refreshVersions(null);
+        }
+
+        private void cbVersion_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void materialButton3_Click(object sender, EventArgs e)
+        {
+            var form = new JavaForm(javaPath);
+            form.ShowDialog();
+            javaPath = form.JavaBinaryPath;
+
+            if (string.IsNullOrEmpty(javaPath))
+                lbJavaPath.Text = "Use default java";
+            else
+                lbJavaPath.Text = javaPath;
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbJavaPath_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private async void materialButton4_Click(object sender, EventArgs e)
+        {
+            MicrosoftLoginForm form = await CreateForm();
+            form.ShowLogoutDialog(); // show logout form
+
+            var loginForm = new LoginForm();
+            loginForm.FormClosed += (s, e) => this.Close();
+            loginForm.Show();
+            this.Hide();
+        }
+
+        private void materialButton5_Click(object sender, EventArgs e)
+        {
+            var computerMemory = Util.GetMemoryMb();
+            if (computerMemory == null)
+            {
+                MessageBox.Show("Failed to get computer memory");
+                return;
+            }
+
+            var max = computerMemory / 2;
+            if (max < 1024)
+                max = 1024;
+            else if (max > 8192)
+                max = 8192;
+
+            var min = max / 5;
+
+            TxtXmx.Text = max.ToString();
+            txtXms.Text = min.ToString();
         }
     }
 }

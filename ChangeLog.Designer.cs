@@ -35,18 +35,20 @@
             // 
             // webBrowser1
             // 
-            this.webBrowser1.Location = new System.Drawing.Point(220, 60);
+            this.webBrowser1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.webBrowser1.Location = new System.Drawing.Point(223, 24);
             this.webBrowser1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 25);
             this.webBrowser1.Name = "webBrowser1";
-            this.webBrowser1.Size = new System.Drawing.Size(574, 480);
+            this.webBrowser1.Size = new System.Drawing.Size(574, 518);
             this.webBrowser1.TabIndex = 3;
             // 
             // btnLoad
             // 
-            this.btnLoad.Location = new System.Drawing.Point(220, 30);
+            this.btnLoad.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnLoad.Location = new System.Drawing.Point(3, 24);
             this.btnLoad.Name = "btnLoad";
-            this.btnLoad.Size = new System.Drawing.Size(574, 23);
+            this.btnLoad.Size = new System.Drawing.Size(220, 26);
             this.btnLoad.TabIndex = 5;
             this.btnLoad.Text = "Load";
             this.btnLoad.UseVisualStyleBackColor = true;
@@ -55,17 +57,19 @@
             // listBox1
             // 
             this.listBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.listBox1.Dock = System.Windows.Forms.DockStyle.Left;
             this.listBox1.FormattingEnabled = true;
             this.listBox1.ItemHeight = 15;
-            this.listBox1.Location = new System.Drawing.Point(6, 30);
+            this.listBox1.Location = new System.Drawing.Point(3, 50);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(208, 510);
+            this.listBox1.Size = new System.Drawing.Size(220, 492);
             this.listBox1.TabIndex = 6;
             // 
             // ChangeLog
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(800, 545);
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.btnLoad);

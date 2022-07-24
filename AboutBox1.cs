@@ -113,5 +113,10 @@ namespace somsClient
             }
         }
         #endregion
+
+        private void textBoxDescription_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
