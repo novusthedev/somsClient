@@ -17,6 +17,7 @@ using MaterialSkin.Controls;
 using CmlLib.Core.Auth.Microsoft;
 using CmlLib.Core.Auth.Microsoft.UI.WinForm;
 using somsClient;
+using MineStatLib;
 
 namespace CmlLibWinFormSample
 {
@@ -121,10 +122,21 @@ namespace CmlLibWinFormSample
                 return;
             }
 
-            // disable ui
-            setUIEnabled(false);
+            MineStat ms = new MineStat("soms.colebolebole.tk", 25565);
 
-            try
+            if (ms.ServerUp)
+            {
+                setUIEnabled(false);
+            }
+            else
+            {
+                MessageBox.Show("The soms server cannot be reached! Please try again later.");
+                setUIEnabled(true);
+                return;
+            }
+
+
+                try
             {
                 // create LaunchOption
                 var launchOption = new MLaunchOption()
@@ -367,6 +379,21 @@ namespace CmlLibWinFormSample
             // aboutform1
             var f = new AboutBox1();
             f.Show();
+        }
+
+        private void label21_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtXms_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

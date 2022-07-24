@@ -24,7 +24,7 @@ namespace somsClient
             this.labelCompanyName.Text = AssemblyCompany;
             this.textBoxDescription.Text = AssemblyDescription;
 
-            if (Environment.Is64BitProcess)
+            if (Environment.Is64BitOperatingSystem)
             {
                 this.windowsBuild.Text = new ComputerInfo().OSFullName + " (64-Bit)";
             }
