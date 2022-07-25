@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            MaterialSkin.Controls.MaterialLabel materialLabel11;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.materialLabel8 = new MaterialSkin.Controls.MaterialLabel();
@@ -45,6 +46,7 @@
             this.txtPath = new MaterialSkin.Controls.MaterialTextBox();
             this.materialButton3 = new MaterialSkin.Controls.MaterialButton();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.launchLegacyMode = new MaterialSkin.Controls.MaterialCheckbox();
             this.materialLabel10 = new MaterialSkin.Controls.MaterialLabel();
             this.materialLabel9 = new MaterialSkin.Controls.MaterialLabel();
             this.cbSkipHashCheck = new MaterialSkin.Controls.MaterialCheckbox();
@@ -52,19 +54,19 @@
             this.rbSequenceDownload = new MaterialSkin.Controls.MaterialRadioButton();
             this.rbParallelDownload = new MaterialSkin.Controls.MaterialRadioButton();
             this.Launch = new MaterialSkin.Controls.MaterialButton();
-            this.Pb_File = new MaterialSkin.Controls.MaterialProgressBar();
             this.Pb_Progress = new MaterialSkin.Controls.MaterialProgressBar();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.materialLabel4 = new MaterialSkin.Controls.MaterialLabel();
             this.lbUsername = new MaterialSkin.Controls.MaterialLabel();
             this.materialButton4 = new MaterialSkin.Controls.MaterialButton();
-            this.webView21 = new Microsoft.Web.WebView2.WinForms.WebView2();
             this.Changelogs = new MaterialSkin.Controls.MaterialButton();
             this.materialButton1 = new MaterialSkin.Controls.MaterialButton();
             this.materialButton2 = new MaterialSkin.Controls.MaterialButton();
             this.cbVersion = new MaterialSkin.Controls.MaterialComboBox();
             this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
             this.Lv_Status = new MaterialSkin.Controls.MaterialLabel();
+            this.webView21 = new Microsoft.Web.WebView2.WinForms.WebView2();
+            materialLabel11 = new MaterialSkin.Controls.MaterialLabel();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -72,9 +74,25 @@
             ((System.ComponentModel.ISupportInitialize)(this.webView21)).BeginInit();
             this.SuspendLayout();
             // 
+            // materialLabel11
+            // 
+            materialLabel11.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            materialLabel11.AutoSize = true;
+            materialLabel11.Depth = 0;
+            materialLabel11.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            materialLabel11.FontType = MaterialSkin.MaterialSkinManager.fontType.SubtleEmphasis;
+            materialLabel11.Location = new System.Drawing.Point(1079, 806);
+            materialLabel11.MouseState = MaterialSkin.MouseState.HOVER;
+            materialLabel11.Name = "materialLabel11";
+            materialLabel11.Size = new System.Drawing.Size(341, 14);
+            materialLabel11.TabIndex = 51;
+            materialLabel11.Text = "Launching in 1.2 mode might fix some issues with mods (Beta)";
+            // 
             // groupBox2
             // 
-            this.groupBox2.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.groupBox2.AutoSize = true;
+            this.groupBox2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.groupBox2.Controls.Add(this.materialLabel8);
             this.groupBox2.Controls.Add(this.materialLabel7);
             this.groupBox2.Controls.Add(this.materialLabel6);
@@ -83,11 +101,11 @@
             this.groupBox2.Controls.Add(this.txtXms);
             this.groupBox2.Controls.Add(this.Txt_JavaArgs);
             this.groupBox2.Controls.Add(this.materialButton5);
-            this.groupBox2.Location = new System.Drawing.Point(982, 316);
+            this.groupBox2.Location = new System.Drawing.Point(253, 435);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.groupBox2.Size = new System.Drawing.Size(498, 254);
+            this.groupBox2.Size = new System.Drawing.Size(468, 256);
             this.groupBox2.TabIndex = 20;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Java Options";
@@ -156,7 +174,7 @@
             this.TxtXmx.MouseState = MaterialSkin.MouseState.OUT;
             this.TxtXmx.Multiline = false;
             this.TxtXmx.Name = "TxtXmx";
-            this.TxtXmx.Size = new System.Drawing.Size(334, 50);
+            this.TxtXmx.Size = new System.Drawing.Size(307, 50);
             this.TxtXmx.TabIndex = 27;
             this.TxtXmx.Text = "1024";
             this.TxtXmx.TrailingIcon = null;
@@ -173,7 +191,7 @@
             this.txtXms.MouseState = MaterialSkin.MouseState.OUT;
             this.txtXms.Multiline = false;
             this.txtXms.Name = "txtXms";
-            this.txtXms.Size = new System.Drawing.Size(334, 50);
+            this.txtXms.Size = new System.Drawing.Size(307, 50);
             this.txtXms.TabIndex = 26;
             this.txtXms.Text = "512";
             this.txtXms.TrailingIcon = null;
@@ -190,7 +208,7 @@
             this.Txt_JavaArgs.MouseState = MaterialSkin.MouseState.OUT;
             this.Txt_JavaArgs.Multiline = false;
             this.Txt_JavaArgs.Name = "Txt_JavaArgs";
-            this.Txt_JavaArgs.Size = new System.Drawing.Size(485, 50);
+            this.Txt_JavaArgs.Size = new System.Drawing.Size(455, 50);
             this.Txt_JavaArgs.TabIndex = 25;
             this.Txt_JavaArgs.Text = "";
             this.Txt_JavaArgs.TrailingIcon = null;
@@ -202,7 +220,7 @@
             this.materialButton5.Depth = 0;
             this.materialButton5.HighEmphasis = true;
             this.materialButton5.Icon = null;
-            this.materialButton5.Location = new System.Drawing.Point(427, 166);
+            this.materialButton5.Location = new System.Drawing.Point(397, 163);
             this.materialButton5.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.materialButton5.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialButton5.Name = "materialButton5";
@@ -217,17 +235,19 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.groupBox1.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.groupBox1.AutoSize = true;
+            this.groupBox1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.groupBox1.Controls.Add(this.materialLabel3);
             this.groupBox1.Controls.Add(this.materialLabel2);
             this.groupBox1.Controls.Add(this.lbJavaPath);
             this.groupBox1.Controls.Add(this.txtPath);
             this.groupBox1.Controls.Add(this.materialButton3);
-            this.groupBox1.Location = new System.Drawing.Point(779, 68);
+            this.groupBox1.Location = new System.Drawing.Point(20, 253);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.groupBox1.Size = new System.Drawing.Size(701, 158);
+            this.groupBox1.Size = new System.Drawing.Size(701, 174);
             this.groupBox1.TabIndex = 16;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Advanced";
@@ -310,32 +330,51 @@
             // 
             // groupBox3
             // 
-            this.groupBox3.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.groupBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.groupBox3.AutoSize = true;
+            this.groupBox3.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.groupBox3.Controls.Add(this.launchLegacyMode);
             this.groupBox3.Controls.Add(this.materialLabel10);
             this.groupBox3.Controls.Add(this.materialLabel9);
             this.groupBox3.Controls.Add(this.cbSkipHashCheck);
             this.groupBox3.Controls.Add(this.cbSkipAssetsDownload);
             this.groupBox3.Controls.Add(this.rbSequenceDownload);
             this.groupBox3.Controls.Add(this.rbParallelDownload);
-            this.groupBox3.Location = new System.Drawing.Point(779, 316);
+            this.groupBox3.Location = new System.Drawing.Point(20, 435);
             this.groupBox3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.groupBox3.Size = new System.Drawing.Size(196, 254);
+            this.groupBox3.Size = new System.Drawing.Size(227, 276);
             this.groupBox3.TabIndex = 27;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Download Options";
+            // 
+            // launchLegacyMode
+            // 
+            this.launchLegacyMode.AutoSize = true;
+            this.launchLegacyMode.Depth = 0;
+            this.launchLegacyMode.Location = new System.Drawing.Point(15, 219);
+            this.launchLegacyMode.Margin = new System.Windows.Forms.Padding(0);
+            this.launchLegacyMode.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.launchLegacyMode.MouseState = MaterialSkin.MouseState.HOVER;
+            this.launchLegacyMode.Name = "launchLegacyMode";
+            this.launchLegacyMode.ReadOnly = false;
+            this.launchLegacyMode.Ripple = true;
+            this.launchLegacyMode.Size = new System.Drawing.Size(199, 37);
+            this.launchLegacyMode.TabIndex = 50;
+            this.launchLegacyMode.Text = "Launch in legacy mode";
+            this.launchLegacyMode.UseVisualStyleBackColor = true;
             // 
             // materialLabel10
             // 
             this.materialLabel10.AutoSize = true;
             this.materialLabel10.Depth = 0;
-            this.materialLabel10.Font = new System.Drawing.Font("Roboto Medium", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel10.FontType = MaterialSkin.MaterialSkinManager.fontType.H6;
+            this.materialLabel10.Font = new System.Drawing.Font("Roboto Medium", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.materialLabel10.FontType = MaterialSkin.MaterialSkinManager.fontType.Subtitle2;
             this.materialLabel10.Location = new System.Drawing.Point(15, 129);
             this.materialLabel10.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel10.Name = "materialLabel10";
-            this.materialLabel10.Size = new System.Drawing.Size(125, 24);
+            this.materialLabel10.Size = new System.Drawing.Size(89, 17);
             this.materialLabel10.TabIndex = 49;
             this.materialLabel10.Text = "More settings";
             // 
@@ -356,7 +395,7 @@
             // 
             this.cbSkipHashCheck.AutoSize = true;
             this.cbSkipHashCheck.Depth = 0;
-            this.cbSkipHashCheck.Location = new System.Drawing.Point(15, 203);
+            this.cbSkipHashCheck.Location = new System.Drawing.Point(15, 182);
             this.cbSkipHashCheck.Margin = new System.Windows.Forms.Padding(0);
             this.cbSkipHashCheck.MouseLocation = new System.Drawing.Point(-1, -1);
             this.cbSkipHashCheck.MouseState = MaterialSkin.MouseState.HOVER;
@@ -372,7 +411,7 @@
             // 
             this.cbSkipAssetsDownload.AutoSize = true;
             this.cbSkipAssetsDownload.Depth = 0;
-            this.cbSkipAssetsDownload.Location = new System.Drawing.Point(15, 167);
+            this.cbSkipAssetsDownload.Location = new System.Drawing.Point(15, 146);
             this.cbSkipAssetsDownload.Margin = new System.Windows.Forms.Padding(0);
             this.cbSkipAssetsDownload.MouseLocation = new System.Drawing.Point(-1, -1);
             this.cbSkipAssetsDownload.MouseState = MaterialSkin.MouseState.HOVER;
@@ -411,21 +450,21 @@
             this.rbParallelDownload.MouseState = MaterialSkin.MouseState.HOVER;
             this.rbParallelDownload.Name = "rbParallelDownload";
             this.rbParallelDownload.Ripple = true;
-            this.rbParallelDownload.Size = new System.Drawing.Size(88, 37);
+            this.rbParallelDownload.Size = new System.Drawing.Size(209, 37);
             this.rbParallelDownload.TabIndex = 27;
             this.rbParallelDownload.TabStop = true;
-            this.rbParallelDownload.Text = "Parallel";
+            this.rbParallelDownload.Text = "Parallel (Recommended)";
             this.rbParallelDownload.UseVisualStyleBackColor = true;
             // 
             // Launch
             // 
-            this.Launch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.Launch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.Launch.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.Launch.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
             this.Launch.Depth = 0;
             this.Launch.HighEmphasis = true;
             this.Launch.Icon = null;
-            this.Launch.Location = new System.Drawing.Point(1416, 595);
+            this.Launch.Location = new System.Drawing.Point(657, 79);
             this.Launch.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.Launch.MouseState = MaterialSkin.MouseState.HOVER;
             this.Launch.Name = "Launch";
@@ -438,37 +477,27 @@
             this.Launch.UseVisualStyleBackColor = true;
             this.Launch.Click += new System.EventHandler(this.Launch_Click1);
             // 
-            // Pb_File
-            // 
-            this.Pb_File.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.Pb_File.Depth = 0;
-            this.Pb_File.Location = new System.Drawing.Point(1073, 655);
-            this.Pb_File.MouseState = MaterialSkin.MouseState.HOVER;
-            this.Pb_File.Name = "Pb_File";
-            this.Pb_File.Size = new System.Drawing.Size(406, 5);
-            this.Pb_File.TabIndex = 32;
-            // 
             // Pb_Progress
             // 
-            this.Pb_Progress.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.Pb_Progress.Depth = 0;
-            this.Pb_Progress.Location = new System.Drawing.Point(1073, 666);
+            this.Pb_Progress.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.Pb_Progress.Location = new System.Drawing.Point(3, 728);
             this.Pb_Progress.MouseState = MaterialSkin.MouseState.HOVER;
             this.Pb_Progress.Name = "Pb_Progress";
-            this.Pb_Progress.Size = new System.Drawing.Size(406, 5);
+            this.Pb_Progress.Size = new System.Drawing.Size(1423, 5);
             this.Pb_Progress.TabIndex = 33;
             // 
             // groupBox5
             // 
-            this.groupBox5.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.groupBox5.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.groupBox5.Controls.Add(this.materialLabel4);
             this.groupBox5.Controls.Add(this.lbUsername);
             this.groupBox5.Controls.Add(this.materialButton4);
-            this.groupBox5.Location = new System.Drawing.Point(779, 234);
+            this.groupBox5.Location = new System.Drawing.Point(20, 145);
             this.groupBox5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.groupBox5.Size = new System.Drawing.Size(701, 74);
+            this.groupBox5.Size = new System.Drawing.Size(701, 85);
             this.groupBox5.TabIndex = 23;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Account";
@@ -519,28 +548,15 @@
             this.materialButton4.UseVisualStyleBackColor = true;
             this.materialButton4.Click += new System.EventHandler(this.materialButton4_Click);
             // 
-            // webView21
-            // 
-            this.webView21.AllowExternalDrop = true;
-            this.webView21.CreationProperties = null;
-            this.webView21.DefaultBackgroundColor = System.Drawing.Color.White;
-            this.webView21.Dock = System.Windows.Forms.DockStyle.Left;
-            this.webView21.Location = new System.Drawing.Point(3, 64);
-            this.webView21.Name = "webView21";
-            this.webView21.Size = new System.Drawing.Size(767, 610);
-            this.webView21.Source = new System.Uri("https://soms-site.colebolebole.repl.co/", System.UriKind.Absolute);
-            this.webView21.TabIndex = 36;
-            this.webView21.ZoomFactor = 1D;
-            // 
             // Changelogs
             // 
-            this.Changelogs.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.Changelogs.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.Changelogs.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.Changelogs.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
             this.Changelogs.Depth = 0;
             this.Changelogs.HighEmphasis = true;
             this.Changelogs.Icon = null;
-            this.Changelogs.Location = new System.Drawing.Point(1287, 595);
+            this.Changelogs.Location = new System.Drawing.Point(451, 79);
             this.Changelogs.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.Changelogs.MouseState = MaterialSkin.MouseState.HOVER;
             this.Changelogs.Name = "Changelogs";
@@ -548,20 +564,20 @@
             this.Changelogs.Size = new System.Drawing.Size(121, 36);
             this.Changelogs.TabIndex = 37;
             this.Changelogs.Text = "Change logs";
-            this.Changelogs.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.Changelogs.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Text;
             this.Changelogs.UseAccentColor = false;
             this.Changelogs.UseVisualStyleBackColor = true;
             this.Changelogs.Click += new System.EventHandler(this.Changelogs_Click);
             // 
             // materialButton1
             // 
-            this.materialButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.materialButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.materialButton1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.materialButton1.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
             this.materialButton1.Depth = 0;
             this.materialButton1.HighEmphasis = true;
             this.materialButton1.Icon = null;
-            this.materialButton1.Location = new System.Drawing.Point(1210, 595);
+            this.materialButton1.Location = new System.Drawing.Point(580, 79);
             this.materialButton1.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.materialButton1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialButton1.Name = "materialButton1";
@@ -569,20 +585,19 @@
             this.materialButton1.Size = new System.Drawing.Size(69, 36);
             this.materialButton1.TabIndex = 38;
             this.materialButton1.Text = "About";
-            this.materialButton1.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.materialButton1.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Text;
             this.materialButton1.UseAccentColor = false;
             this.materialButton1.UseVisualStyleBackColor = true;
             this.materialButton1.Click += new System.EventHandler(this.materialButton1_Click);
             // 
             // materialButton2
             // 
-            this.materialButton2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.materialButton2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.materialButton2.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
             this.materialButton2.Depth = 0;
             this.materialButton2.HighEmphasis = true;
             this.materialButton2.Icon = null;
-            this.materialButton2.Location = new System.Drawing.Point(982, 632);
+            this.materialButton2.Location = new System.Drawing.Point(265, 88);
             this.materialButton2.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.materialButton2.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialButton2.Name = "materialButton2";
@@ -590,14 +605,13 @@
             this.materialButton2.Size = new System.Drawing.Size(84, 36);
             this.materialButton2.TabIndex = 39;
             this.materialButton2.Text = "Refresh";
-            this.materialButton2.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.materialButton2.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Text;
             this.materialButton2.UseAccentColor = false;
             this.materialButton2.UseVisualStyleBackColor = true;
             this.materialButton2.Click += new System.EventHandler(this.materialButton2_Click);
             // 
             // cbVersion
             // 
-            this.cbVersion.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.cbVersion.AutoResize = false;
             this.cbVersion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.cbVersion.Depth = 0;
@@ -610,62 +624,74 @@
             this.cbVersion.FormattingEnabled = true;
             this.cbVersion.IntegralHeight = false;
             this.cbVersion.ItemHeight = 43;
-            this.cbVersion.Location = new System.Drawing.Point(776, 625);
+            this.cbVersion.Location = new System.Drawing.Point(90, 80);
             this.cbVersion.MaxDropDownItems = 4;
             this.cbVersion.MouseState = MaterialSkin.MouseState.OUT;
             this.cbVersion.Name = "cbVersion";
-            this.cbVersion.Size = new System.Drawing.Size(199, 49);
+            this.cbVersion.Size = new System.Drawing.Size(168, 49);
             this.cbVersion.StartIndex = 0;
             this.cbVersion.TabIndex = 40;
             // 
             // materialLabel1
             // 
-            this.materialLabel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.materialLabel1.AutoSize = true;
             this.materialLabel1.Depth = 0;
             this.materialLabel1.Font = new System.Drawing.Font("Roboto Medium", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
             this.materialLabel1.FontType = MaterialSkin.MaterialSkinManager.fontType.Subtitle2;
-            this.materialLabel1.Location = new System.Drawing.Point(779, 605);
+            this.materialLabel1.Location = new System.Drawing.Point(24, 98);
             this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel1.Name = "materialLabel1";
-            this.materialLabel1.Size = new System.Drawing.Size(50, 17);
+            this.materialLabel1.Size = new System.Drawing.Size(60, 17);
             this.materialLabel1.TabIndex = 41;
-            this.materialLabel1.Text = "Version";
+            this.materialLabel1.Text = "Version : ";
             // 
             // Lv_Status
             // 
-            this.Lv_Status.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.Lv_Status.AutoSize = true;
             this.Lv_Status.Depth = 0;
+            this.Lv_Status.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.Lv_Status.Font = new System.Drawing.Font("Roboto Medium", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
             this.Lv_Status.FontType = MaterialSkin.MaterialSkinManager.fontType.Subtitle2;
-            this.Lv_Status.Location = new System.Drawing.Point(1073, 635);
+            this.Lv_Status.Location = new System.Drawing.Point(3, 711);
             this.Lv_Status.MouseState = MaterialSkin.MouseState.HOVER;
             this.Lv_Status.Name = "Lv_Status";
             this.Lv_Status.Size = new System.Drawing.Size(41, 17);
             this.Lv_Status.TabIndex = 42;
             this.Lv_Status.Text = "Ready";
             // 
+            // webView21
+            // 
+            this.webView21.AllowExternalDrop = true;
+            this.webView21.CreationProperties = null;
+            this.webView21.DefaultBackgroundColor = System.Drawing.Color.White;
+            this.webView21.Dock = System.Windows.Forms.DockStyle.Right;
+            this.webView21.Location = new System.Drawing.Point(735, 64);
+            this.webView21.Name = "webView21";
+            this.webView21.Size = new System.Drawing.Size(691, 647);
+            this.webView21.Source = new System.Uri("https://soms-site.colebolebole.repl.co/", System.UriKind.Absolute);
+            this.webView21.TabIndex = 52;
+            this.webView21.ZoomFactor = 1D;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(1486, 677);
+            this.ClientSize = new System.Drawing.Size(1429, 736);
+            this.Controls.Add(this.webView21);
+            this.Controls.Add(this.groupBox5);
+            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.groupBox3);
+            this.Controls.Add(materialLabel11);
             this.Controls.Add(this.Lv_Status);
             this.Controls.Add(this.materialLabel1);
             this.Controls.Add(this.cbVersion);
-            this.Controls.Add(this.webView21);
             this.Controls.Add(this.materialButton2);
             this.Controls.Add(this.materialButton1);
             this.Controls.Add(this.Changelogs);
-            this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.Pb_Progress);
-            this.Controls.Add(this.Pb_File);
             this.Controls.Add(this.Launch);
-            this.Controls.Add(this.groupBox3);
-            this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.groupBox2);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "MainForm";
@@ -691,10 +717,8 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox3;
         private MaterialSkin.Controls.MaterialButton Launch;
-        private MaterialSkin.Controls.MaterialProgressBar Pb_File;
         private MaterialSkin.Controls.MaterialProgressBar Pb_Progress;
         private GroupBox groupBox5;
-        private Microsoft.Web.WebView2.WinForms.WebView2 webView21;
         private MaterialSkin.Controls.MaterialButton Changelogs;
         private MaterialSkin.Controls.MaterialButton materialButton1;
         private MaterialSkin.Controls.MaterialButton materialButton2;
@@ -723,5 +747,7 @@
         private MaterialSkin.Controls.MaterialLabel materialLabel9;
         private MaterialSkin.Controls.MaterialCheckbox cbSkipHashCheck;
         private MaterialSkin.Controls.MaterialCheckbox cbSkipAssetsDownload;
+        private MaterialSkin.Controls.MaterialCheckbox launchLegacyMode;
+        private Microsoft.Web.WebView2.WinForms.WebView2 webView21;
     }
 }

@@ -237,8 +237,8 @@ namespace CmlLibWinFormSample
             {
                 Debug.WriteLine(e);
             }
-            Pb_File.Maximum = e.TotalFileCount;
-            Pb_File.Value = e.ProgressedFileCount;
+            Pb_Progress.Maximum = e.TotalFileCount;
+            Pb_Progress.Value = e.ProgressedFileCount;
             Lv_Status.Text = $"{e.FileKind} : {e.FileName} ({e.ProgressedFileCount}/{e.TotalFileCount})";
             //Debug.WriteLine(Lv_Status.Text);
         }
@@ -296,9 +296,17 @@ namespace CmlLibWinFormSample
             process.StartInfo.StandardOutputEncoding = System.Text.Encoding.UTF8;
             process.EnableRaisingEvents = true;
 
-            process.Start();
-            process.BeginErrorReadLine();
-            process.BeginOutputReadLine();
+
+            if (launchLegacyMode.Checked)
+            {
+                StartProcess(process);
+                process.BeginErrorReadLine();
+                process.BeginOutputReadLine();
+            }
+            else
+            {
+                process.Start();
+            }
         }
 
         private static Task<MicrosoftLoginForm> CreateForm()

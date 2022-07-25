@@ -29,30 +29,18 @@
         private void InitializeComponent()
         {
             this.webBrowser1 = new System.Windows.Forms.WebBrowser();
-            this.btnLoad = new System.Windows.Forms.Button();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
             // webBrowser1
             // 
             this.webBrowser1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.webBrowser1.Location = new System.Drawing.Point(223, 24);
+            this.webBrowser1.Location = new System.Drawing.Point(229, 24);
             this.webBrowser1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 25);
             this.webBrowser1.Name = "webBrowser1";
-            this.webBrowser1.Size = new System.Drawing.Size(574, 518);
+            this.webBrowser1.Size = new System.Drawing.Size(568, 518);
             this.webBrowser1.TabIndex = 3;
-            // 
-            // btnLoad
-            // 
-            this.btnLoad.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnLoad.Location = new System.Drawing.Point(3, 24);
-            this.btnLoad.Name = "btnLoad";
-            this.btnLoad.Size = new System.Drawing.Size(220, 26);
-            this.btnLoad.TabIndex = 5;
-            this.btnLoad.Text = "Load";
-            this.btnLoad.UseVisualStyleBackColor = true;
-            this.btnLoad.Click += new System.EventHandler(this.btnLoad_Click);
             // 
             // listBox1
             // 
@@ -60,10 +48,11 @@
             this.listBox1.Dock = System.Windows.Forms.DockStyle.Left;
             this.listBox1.FormattingEnabled = true;
             this.listBox1.ItemHeight = 15;
-            this.listBox1.Location = new System.Drawing.Point(3, 50);
+            this.listBox1.Location = new System.Drawing.Point(3, 24);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(220, 492);
+            this.listBox1.Size = new System.Drawing.Size(220, 518);
             this.listBox1.TabIndex = 6;
+            this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
             // ChangeLog
             // 
@@ -72,7 +61,6 @@
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(800, 545);
             this.Controls.Add(this.listBox1);
-            this.Controls.Add(this.btnLoad);
             this.Controls.Add(this.webBrowser1);
             this.FormStyle = MaterialSkin.Controls.MaterialForm.FormStyles.ActionBar_None;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -83,8 +71,6 @@
             this.ResumeLayout(false);
 
         }
-
-        private System.Windows.Forms.Button btnLoad;
 
         #endregion
         private System.Windows.Forms.WebBrowser webBrowser1;

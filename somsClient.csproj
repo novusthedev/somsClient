@@ -8,7 +8,7 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <SupportedOSPlatformVersion>8.0</SupportedOSPlatformVersion>
     <AssemblyName>somsClient</AssemblyName>
-    <Version>1.4</Version>
+    <Version>1.4.1</Version>
     <Description>soms Client is a good to use lightweight Minecraft client / launcher for Windows 8.1/10/11.
 soms Client supports a range of computers from older low end devices to newer high end ones.
 
