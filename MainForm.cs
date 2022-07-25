@@ -30,7 +30,7 @@ namespace CmlLibWinFormSample
             var skinManager = MaterialSkinManager.Instance;
             skinManager.AddFormToManage(this);
             skinManager.Theme = MaterialSkinManager.Themes.DARK;
-            skinManager.ColorScheme = new ColorScheme(Primary.Teal800, Primary.Teal900, Primary.Teal500, Accent.Teal200, TextShade.WHITE);
+            skinManager.ColorScheme = new ColorScheme(Primary.Red800, Primary.Red900, Primary.Red500, Accent.Red200, TextShade.WHITE);
         }
 
         CMLauncher launcher;
@@ -40,7 +40,9 @@ namespace CmlLibWinFormSample
 
         private async void MainForm_Shown(object sender, EventArgs e)
         {
-            
+
+            WindowTitle.Text = this.Text.ToString();
+
             // Initialize launcher
             var defaultPath = new MinecraftPath(MinecraftPath.GetOSDefaultPath());
             await initializeLauncher(defaultPath);
@@ -323,14 +325,6 @@ namespace CmlLibWinFormSample
         private void btnChangelog_Click(object sender, EventArgs e)
         {
             
-        }
-
-        private void btnOptions_Click(object sender, EventArgs e)
-        {
-            // options.txt
-            var path = System.IO.Path.Combine(gamePath.BasePath, "options.txt");
-            var f = new GameOptions(path);
-            f.Show();
         }
 
         private void btnGithub_Click(object sender, EventArgs e)

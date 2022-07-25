@@ -8,14 +8,18 @@ using System.Reflection;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Microsoft.Win32;
+using MaterialSkin;
+using MaterialSkin.Controls;
 
 namespace somsClient
 {
-    partial class AboutBox1 : Form
+    partial class AboutBox1 : MaterialForm
     {
         public AboutBox1()
         {
             InitializeComponent();
+            var skinManager = MaterialSkinManager.Instance;
+            skinManager.AddFormToManage(this);
 
             this.Text = String.Format("About {0}", AssemblyTitle);
             this.labelProductName.Text = AssemblyProduct;

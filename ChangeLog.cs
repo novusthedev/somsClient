@@ -13,8 +13,6 @@ namespace CmlLibWinFormSample
             InitializeComponent();
             var skinManager = MaterialSkinManager.Instance;
             skinManager.AddFormToManage(this);
-            skinManager.Theme = MaterialSkinManager.Themes.DARK;
-            skinManager.ColorScheme = new ColorScheme(Primary.Teal800, Primary.Teal900, Primary.Teal500, Accent.Teal200, TextShade.WHITE);
         }
 
         private Changelogs changelogs;

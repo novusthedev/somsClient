@@ -32,6 +32,7 @@
             this.materialLabel2 = new MaterialSkin.Controls.MaterialLabel();
             this.materialButton1 = new MaterialSkin.Controls.MaterialButton();
             this.materialLabel3 = new MaterialSkin.Controls.MaterialLabel();
+            this.materialLabel4 = new MaterialSkin.Controls.MaterialLabel();
             this.SuspendLayout();
             // 
             // materialLabel1
@@ -42,9 +43,9 @@
             this.materialLabel1.Location = new System.Drawing.Point(6, 74);
             this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel1.Name = "materialLabel1";
-            this.materialLabel1.Size = new System.Drawing.Size(131, 19);
+            this.materialLabel1.Size = new System.Drawing.Size(492, 19);
             this.materialLabel1.TabIndex = 0;
-            this.materialLabel1.Text = "Login to Microsoft";
+            this.materialLabel1.Text = "To access this launcher and play Minecraft, please login to your MSA.";
             // 
             // materialLabel2
             // 
@@ -65,7 +66,7 @@
             this.materialButton1.Depth = 0;
             this.materialButton1.HighEmphasis = true;
             this.materialButton1.Icon = null;
-            this.materialButton1.Location = new System.Drawing.Point(7, 99);
+            this.materialButton1.Location = new System.Drawing.Point(6, 99);
             this.materialButton1.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.materialButton1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialButton1.Name = "materialButton1";
@@ -90,11 +91,24 @@
             this.materialLabel3.TabIndex = 4;
             this.materialLabel3.Text = "If you still have one, Please migrate to a MSA to use this client.";
             // 
+            // materialLabel4
+            // 
+            this.materialLabel4.AutoSize = true;
+            this.materialLabel4.Depth = 0;
+            this.materialLabel4.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.materialLabel4.Location = new System.Drawing.Point(6, 196);
+            this.materialLabel4.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel4.Name = "materialLabel4";
+            this.materialLabel4.Size = new System.Drawing.Size(517, 19);
+            this.materialLabel4.TabIndex = 5;
+            this.materialLabel4.Text = "If you have issues logging in, Please submit an issue on our GitHub page.";
+            // 
             // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(482, 199);
+            this.ClientSize = new System.Drawing.Size(526, 219);
+            this.Controls.Add(this.materialLabel4);
             this.Controls.Add(this.materialLabel3);
             this.Controls.Add(this.materialButton1);
             this.Controls.Add(this.materialLabel2);
@@ -104,7 +118,7 @@
             this.MinimizeBox = false;
             this.Name = "LoginForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Minecraft Login";
+            this.Text = "Login to Microsoft / Xbox Live";
             this.Shown += new System.EventHandler(this.LoginForm_Shown);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -117,5 +131,6 @@
         private MaterialSkin.Controls.MaterialLabel materialLabel2;
         private MaterialSkin.Controls.MaterialButton materialButton1;
         private MaterialSkin.Controls.MaterialLabel materialLabel3;
+        private MaterialSkin.Controls.MaterialLabel materialLabel4;
     }
 }

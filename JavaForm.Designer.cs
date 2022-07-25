@@ -28,71 +28,103 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label4 = new System.Windows.Forms.Label();
-            this.txtUserJava = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.btnClose = new System.Windows.Forms.Button();
-            this.cbAutoJava = new System.Windows.Forms.CheckBox();
+            this.materialButton1 = new MaterialSkin.Controls.MaterialButton();
+            this.materialCheckbox1 = new MaterialSkin.Controls.MaterialCheckbox();
+            this.txtUserJava = new MaterialSkin.Controls.MaterialTextBox();
+            this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
+            this.materialLabel2 = new MaterialSkin.Controls.MaterialLabel();
             this.SuspendLayout();
             // 
-            // label4
+            // materialButton1
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(12, 136);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(144, 30);
-            this.label4.TabIndex = 5;
-            this.label4.Text = "Input java binary file path.\r\nex) java.exe, javaw.exe";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
+            this.materialButton1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.materialButton1.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.materialButton1.Depth = 0;
+            this.materialButton1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.materialButton1.HighEmphasis = true;
+            this.materialButton1.Icon = null;
+            this.materialButton1.Location = new System.Drawing.Point(3, 216);
+            this.materialButton1.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.materialButton1.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialButton1.Name = "materialButton1";
+            this.materialButton1.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.materialButton1.Size = new System.Drawing.Size(616, 36);
+            this.materialButton1.TabIndex = 8;
+            this.materialButton1.Text = "Close";
+            this.materialButton1.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.materialButton1.UseAccentColor = false;
+            this.materialButton1.UseVisualStyleBackColor = true;
+            this.materialButton1.Click += new System.EventHandler(this.materialButton1_Click);
+            // 
+            // materialCheckbox1
+            // 
+            this.materialCheckbox1.AutoSize = true;
+            this.materialCheckbox1.Depth = 0;
+            this.materialCheckbox1.Location = new System.Drawing.Point(6, 73);
+            this.materialCheckbox1.Margin = new System.Windows.Forms.Padding(0);
+            this.materialCheckbox1.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.materialCheckbox1.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialCheckbox1.Name = "materialCheckbox1";
+            this.materialCheckbox1.ReadOnly = false;
+            this.materialCheckbox1.Ripple = true;
+            this.materialCheckbox1.Size = new System.Drawing.Size(194, 37);
+            this.materialCheckbox1.TabIndex = 9;
+            this.materialCheckbox1.Text = "Auto-set the Java path";
+            this.materialCheckbox1.UseVisualStyleBackColor = true;
+            this.materialCheckbox1.CheckedChanged += new System.EventHandler(this.materialCheckbox1_CheckedChanged);
             // 
             // txtUserJava
             // 
-            this.txtUserJava.Location = new System.Drawing.Point(94, 103);
-            this.txtUserJava.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtUserJava.AnimateReadOnly = false;
+            this.txtUserJava.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtUserJava.Depth = 0;
+            this.txtUserJava.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.txtUserJava.LeadingIcon = null;
+            this.txtUserJava.Location = new System.Drawing.Point(12, 137);
+            this.txtUserJava.MaxLength = 50;
+            this.txtUserJava.MouseState = MaterialSkin.MouseState.OUT;
+            this.txtUserJava.Multiline = false;
             this.txtUserJava.Name = "txtUserJava";
-            this.txtUserJava.Size = new System.Drawing.Size(313, 23);
-            this.txtUserJava.TabIndex = 6;
+            this.txtUserJava.Size = new System.Drawing.Size(604, 50);
+            this.txtUserJava.TabIndex = 10;
+            this.txtUserJava.Text = "";
+            this.txtUserJava.TrailingIcon = null;
             // 
-            // label3
+            // materialLabel1
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 106);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(65, 15);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "Java Path : ";
+            this.materialLabel1.AutoSize = true;
+            this.materialLabel1.Depth = 0;
+            this.materialLabel1.Font = new System.Drawing.Font("Roboto Medium", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.materialLabel1.FontType = MaterialSkin.MaterialSkinManager.fontType.H6;
+            this.materialLabel1.Location = new System.Drawing.Point(12, 110);
+            this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel1.Name = "materialLabel1";
+            this.materialLabel1.Size = new System.Drawing.Size(106, 24);
+            this.materialLabel1.TabIndex = 11;
+            this.materialLabel1.Text = "Java Path : ";
             // 
-            // btnClose
+            // materialLabel2
             // 
-            this.btnClose.Location = new System.Drawing.Point(12, 170);
-            this.btnClose.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(394, 23);
-            this.btnClose.TabIndex = 6;
-            this.btnClose.Text = "Close";
-            this.btnClose.UseVisualStyleBackColor = true;
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
-            // 
-            // cbAutoJava
-            // 
-            this.cbAutoJava.Location = new System.Drawing.Point(12, 74);
-            this.cbAutoJava.Name = "cbAutoJava";
-            this.cbAutoJava.Size = new System.Drawing.Size(188, 22);
-            this.cbAutoJava.TabIndex = 7;
-            this.cbAutoJava.Text = "Set java path automatically";
-            this.cbAutoJava.UseVisualStyleBackColor = true;
-            this.cbAutoJava.CheckedChanged += new System.EventHandler(this.cbAutoJava_CheckedChanged);
+            this.materialLabel2.AutoSize = true;
+            this.materialLabel2.Depth = 0;
+            this.materialLabel2.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.materialLabel2.Location = new System.Drawing.Point(12, 190);
+            this.materialLabel2.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel2.Name = "materialLabel2";
+            this.materialLabel2.Size = new System.Drawing.Size(355, 19);
+            this.materialLabel2.TabIndex = 12;
+            this.materialLabel2.Text = "Input java binary file path. (ex) java.exe, javaw.exe";
             // 
             // JavaForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(419, 200);
-            this.Controls.Add(this.cbAutoJava);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.btnClose);
-            this.Controls.Add(this.label3);
+            this.ClientSize = new System.Drawing.Size(622, 255);
+            this.Controls.Add(this.materialLabel2);
+            this.Controls.Add(this.materialLabel1);
             this.Controls.Add(this.txtUserJava);
+            this.Controls.Add(this.materialCheckbox1);
+            this.Controls.Add(this.materialButton1);
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -105,13 +137,11 @@
 
         }
 
-        private System.Windows.Forms.CheckBox cbAutoJava;
-
         #endregion
-
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtUserJava;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button btnClose;
+        private MaterialSkin.Controls.MaterialButton materialButton1;
+        private MaterialSkin.Controls.MaterialCheckbox materialCheckbox1;
+        private MaterialSkin.Controls.MaterialTextBox txtUserJava;
+        private MaterialSkin.Controls.MaterialLabel materialLabel1;
+        private MaterialSkin.Controls.MaterialLabel materialLabel2;
     }
 }
