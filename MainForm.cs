@@ -29,7 +29,6 @@ namespace CmlLibWinFormSample
             InitializeComponent();
             var skinManager = MaterialSkinManager.Instance;
             skinManager.AddFormToManage(this);
-            skinManager.Theme = MaterialSkinManager.Themes.DARK;
             skinManager.ColorScheme = new ColorScheme(Primary.Red800, Primary.Red900, Primary.Red500, Accent.Red200, TextShade.WHITE);
         }
 
@@ -57,10 +56,8 @@ namespace CmlLibWinFormSample
             var max = computerMemory / 2;
             if (max < 1024)
                 max = 1024;
-            else if (max > 8192)
-                max = 8192;
 
-            var min = max / 5;
+            var min = max / 2;
 
             TxtXmx.Text = max.ToString();
             txtXms.Text = min.ToString();
@@ -148,7 +145,7 @@ namespace CmlLibWinFormSample
 
                     GameLauncherName = "soms Client",
                     GameLauncherVersion = "2022.7.22",
-                    VersionType = "soms",
+                    VersionType = "soms" + String.Format("_{0}", ProductVersion),
 
                     ServerIp = "soms.colebolebole.tk",
                     ServerPort = 25565,
@@ -221,6 +218,7 @@ namespace CmlLibWinFormSample
         }
         
         private int uiThreadId = Thread.CurrentThread.ManagedThreadId;
+        private bool materialSwitch1_Checked;
 
         // Event Handler. Show download progress
         private void Launcher_ProgressChanged(object sender, ProgressChangedEventArgs e)
@@ -322,21 +320,6 @@ namespace CmlLibWinFormSample
             return Task.FromResult(form);
         }
 
-        private void btnChangelog_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void btnGithub_Click(object sender, EventArgs e)
-        {
-            start("https://github.com/AlphaBs/CmlLib.Core");
-        }
-
-        private void btnWiki_Click(object sender, EventArgs e)
-        {
-            start("https://github.com/AlphaBs/CmlLib.Core/wiki/");
-        }
-
         private void start(string url)
         {
             try
@@ -400,13 +383,6 @@ namespace CmlLibWinFormSample
             f.Show();
         }
 
-        private void Changelogs_Click(object sender, EventArgs e)
-        {
-            // Game Changelog
-            var f = new ChangeLog();
-            f.Show();
-        }
-
         private async void materialButton2_Click(object sender, EventArgs e)
         {
             await refreshVersions(null);
@@ -462,13 +438,33 @@ namespace CmlLibWinFormSample
             var max = computerMemory / 2;
             if (max < 1024)
                 max = 1024;
-            else if (max > 8192)
-                max = 8192;
 
-            var min = max / 5;
+            var min = max / 2;
 
             TxtXmx.Text = max.ToString();
             txtXms.Text = min.ToString();
+        }
+
+        private void materialButton6_Click(object sender, EventArgs e)
+        {
+            // github
+            var f = new GitHub();
+            f.Show();
+        }
+
+        private void materialSwitch1_CheckedChanged(object sender, EventArgs e)
+        {
+
+            var skinManager = MaterialSkinManager.Instance;
+
+            if (materialSwitch1.Checked)
+                {
+                skinManager.Theme = MaterialSkinManager.Themes.LIGHT;
+            }
+            else
+            {
+                skinManager.Theme = MaterialSkinManager.Themes.DARK;
+            }
         }
     }
 }

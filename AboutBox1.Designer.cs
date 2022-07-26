@@ -28,107 +28,102 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AboutBox1));
-            this.windowsBuild = new System.Windows.Forms.Label();
-            this.labelProductName = new System.Windows.Forms.Label();
-            this.labelVersion = new System.Windows.Forms.Label();
-            this.labelCopyright = new System.Windows.Forms.Label();
-            this.labelCompanyName = new System.Windows.Forms.Label();
-            this.textBoxDescription = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.labelProductName = new MaterialSkin.Controls.MaterialLabel();
+            this.labelVersion = new MaterialSkin.Controls.MaterialLabel();
+            this.labelCompanyName = new MaterialSkin.Controls.MaterialLabel();
+            this.labelCopyright = new MaterialSkin.Controls.MaterialLabel();
+            this.windowsBuild = new MaterialSkin.Controls.MaterialLabel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // windowsBuild
-            // 
-            this.windowsBuild.Location = new System.Drawing.Point(147, 148);
-            this.windowsBuild.Margin = new System.Windows.Forms.Padding(7, 0, 4, 0);
-            this.windowsBuild.MaximumSize = new System.Drawing.Size(0, 20);
-            this.windowsBuild.Name = "windowsBuild";
-            this.windowsBuild.Size = new System.Drawing.Size(524, 20);
-            this.windowsBuild.TabIndex = 31;
-            this.windowsBuild.Text = "Windows 8.1 (32-Bit)";
-            this.windowsBuild.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // labelProductName
-            // 
-            this.labelProductName.Location = new System.Drawing.Point(7, 138);
-            this.labelProductName.Margin = new System.Windows.Forms.Padding(7, 0, 4, 0);
-            this.labelProductName.MaximumSize = new System.Drawing.Size(0, 20);
-            this.labelProductName.Name = "labelProductName";
-            this.labelProductName.Size = new System.Drawing.Size(664, 20);
-            this.labelProductName.TabIndex = 27;
-            this.labelProductName.Text = "Product Name";
-            this.labelProductName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // labelVersion
-            // 
-            this.labelVersion.Location = new System.Drawing.Point(147, 27);
-            this.labelVersion.Margin = new System.Windows.Forms.Padding(7, 0, 4, 0);
-            this.labelVersion.MaximumSize = new System.Drawing.Size(0, 20);
-            this.labelVersion.Name = "labelVersion";
-            this.labelVersion.Size = new System.Drawing.Size(524, 20);
-            this.labelVersion.TabIndex = 25;
-            this.labelVersion.Text = "Version";
-            this.labelVersion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // labelCopyright
-            // 
-            this.labelCopyright.Location = new System.Drawing.Point(147, 56);
-            this.labelCopyright.Margin = new System.Windows.Forms.Padding(7, 0, 4, 0);
-            this.labelCopyright.MaximumSize = new System.Drawing.Size(0, 20);
-            this.labelCopyright.Name = "labelCopyright";
-            this.labelCopyright.Size = new System.Drawing.Size(524, 20);
-            this.labelCopyright.TabIndex = 28;
-            this.labelCopyright.Text = "Copyright";
-            this.labelCopyright.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // labelCompanyName
-            // 
-            this.labelCompanyName.Location = new System.Drawing.Point(147, 118);
-            this.labelCompanyName.Margin = new System.Windows.Forms.Padding(7, 0, 4, 0);
-            this.labelCompanyName.MaximumSize = new System.Drawing.Size(0, 20);
-            this.labelCompanyName.Name = "labelCompanyName";
-            this.labelCompanyName.Size = new System.Drawing.Size(524, 20);
-            this.labelCompanyName.TabIndex = 29;
-            this.labelCompanyName.Text = "Company Name";
-            this.labelCompanyName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // textBoxDescription
-            // 
-            this.textBoxDescription.Location = new System.Drawing.Point(7, 174);
-            this.textBoxDescription.Margin = new System.Windows.Forms.Padding(7, 3, 4, 3);
-            this.textBoxDescription.Multiline = true;
-            this.textBoxDescription.Name = "textBoxDescription";
-            this.textBoxDescription.ReadOnly = true;
-            this.textBoxDescription.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.textBoxDescription.Size = new System.Drawing.Size(664, 254);
-            this.textBoxDescription.TabIndex = 30;
-            this.textBoxDescription.TabStop = false;
-            this.textBoxDescription.Text = "Description";
-            this.textBoxDescription.TextChanged += new System.EventHandler(this.textBoxDescription_TextChanged);
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(7, 27);
+            this.pictureBox1.Location = new System.Drawing.Point(10, 27);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(138, 141);
+            this.pictureBox1.Size = new System.Drawing.Size(52, 53);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 32;
             this.pictureBox1.TabStop = false;
+            // 
+            // labelProductName
+            // 
+            this.labelProductName.AutoSize = true;
+            this.labelProductName.Depth = 0;
+            this.labelProductName.Font = new System.Drawing.Font("Roboto", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.labelProductName.FontType = MaterialSkin.MaterialSkinManager.fontType.H5;
+            this.labelProductName.Location = new System.Drawing.Point(68, 27);
+            this.labelProductName.MouseState = MaterialSkin.MouseState.HOVER;
+            this.labelProductName.Name = "labelProductName";
+            this.labelProductName.Size = new System.Drawing.Size(156, 29);
+            this.labelProductName.TabIndex = 33;
+            this.labelProductName.Text = "Product Name";
+            // 
+            // labelVersion
+            // 
+            this.labelVersion.AutoSize = true;
+            this.labelVersion.Depth = 0;
+            this.labelVersion.Font = new System.Drawing.Font("Roboto Medium", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.labelVersion.FontType = MaterialSkin.MaterialSkinManager.fontType.H6;
+            this.labelVersion.Location = new System.Drawing.Point(68, 56);
+            this.labelVersion.MouseState = MaterialSkin.MouseState.HOVER;
+            this.labelVersion.Name = "labelVersion";
+            this.labelVersion.Size = new System.Drawing.Size(136, 24);
+            this.labelVersion.TabIndex = 34;
+            this.labelVersion.Text = "Version 0.0.0.0";
+            // 
+            // labelCompanyName
+            // 
+            this.labelCompanyName.AutoSize = true;
+            this.labelCompanyName.Depth = 0;
+            this.labelCompanyName.Font = new System.Drawing.Font("Roboto Medium", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.labelCompanyName.FontType = MaterialSkin.MaterialSkinManager.fontType.H6;
+            this.labelCompanyName.Location = new System.Drawing.Point(10, 83);
+            this.labelCompanyName.MouseState = MaterialSkin.MouseState.HOVER;
+            this.labelCompanyName.Name = "labelCompanyName";
+            this.labelCompanyName.Size = new System.Drawing.Size(85, 24);
+            this.labelCompanyName.TabIndex = 35;
+            this.labelCompanyName.Text = "Company";
+            // 
+            // labelCopyright
+            // 
+            this.labelCopyright.AutoSize = true;
+            this.labelCopyright.Depth = 0;
+            this.labelCopyright.Font = new System.Drawing.Font("Roboto Medium", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.labelCopyright.FontType = MaterialSkin.MaterialSkinManager.fontType.Subtitle2;
+            this.labelCopyright.Location = new System.Drawing.Point(10, 107);
+            this.labelCopyright.MouseState = MaterialSkin.MouseState.HOVER;
+            this.labelCopyright.Name = "labelCopyright";
+            this.labelCopyright.Size = new System.Drawing.Size(63, 17);
+            this.labelCopyright.TabIndex = 36;
+            this.labelCopyright.Text = "Copyright";
+            // 
+            // windowsBuild
+            // 
+            this.windowsBuild.AutoSize = true;
+            this.windowsBuild.Depth = 0;
+            this.windowsBuild.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.windowsBuild.FontType = MaterialSkin.MaterialSkinManager.fontType.Subtitle1;
+            this.windowsBuild.Location = new System.Drawing.Point(10, 124);
+            this.windowsBuild.MouseState = MaterialSkin.MouseState.HOVER;
+            this.windowsBuild.Name = "windowsBuild";
+            this.windowsBuild.Size = new System.Drawing.Size(96, 19);
+            this.windowsBuild.TabIndex = 37;
+            this.windowsBuild.Text = "OS: Unknown";
             // 
             // AboutBox1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(680, 433);
-            this.Controls.Add(this.pictureBox1);
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.ClientSize = new System.Drawing.Size(454, 148);
             this.Controls.Add(this.windowsBuild);
-            this.Controls.Add(this.labelProductName);
-            this.Controls.Add(this.labelVersion);
             this.Controls.Add(this.labelCopyright);
             this.Controls.Add(this.labelCompanyName);
-            this.Controls.Add(this.textBoxDescription);
+            this.Controls.Add(this.labelVersion);
+            this.Controls.Add(this.labelProductName);
+            this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.FormStyle = MaterialSkin.Controls.MaterialForm.FormStyles.ActionBar_None;
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
@@ -147,13 +142,11 @@
         }
 
         #endregion
-
-        private Label windowsBuild;
-        private Label labelProductName;
-        private Label labelVersion;
-        private Label labelCopyright;
-        private Label labelCompanyName;
-        private TextBox textBoxDescription;
         private PictureBox pictureBox1;
+        private MaterialSkin.Controls.MaterialLabel labelProductName;
+        private MaterialSkin.Controls.MaterialLabel labelVersion;
+        private MaterialSkin.Controls.MaterialLabel labelCompanyName;
+        private MaterialSkin.Controls.MaterialLabel labelCopyright;
+        private MaterialSkin.Controls.MaterialLabel windowsBuild;
     }
 }

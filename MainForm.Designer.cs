@@ -57,7 +57,6 @@
             this.Pb_Progress = new MaterialSkin.Controls.MaterialProgressBar();
             this.lbUsername = new MaterialSkin.Controls.MaterialLabel();
             this.materialButton4 = new MaterialSkin.Controls.MaterialButton();
-            this.Changelogs = new MaterialSkin.Controls.MaterialButton();
             this.materialButton1 = new MaterialSkin.Controls.MaterialButton();
             this.materialButton2 = new MaterialSkin.Controls.MaterialButton();
             this.cbVersion = new MaterialSkin.Controls.MaterialComboBox();
@@ -65,6 +64,8 @@
             this.Lv_Status = new MaterialSkin.Controls.MaterialLabel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.WindowTitle = new MaterialSkin.Controls.MaterialLabel();
+            this.materialButton6 = new MaterialSkin.Controls.MaterialButton();
+            this.materialSwitch1 = new MaterialSkin.Controls.MaterialSwitch();
             materialLabel11 = new MaterialSkin.Controls.MaterialLabel();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -520,27 +521,6 @@
             this.materialButton4.UseVisualStyleBackColor = true;
             this.materialButton4.Click += new System.EventHandler(this.materialButton4_Click);
             // 
-            // Changelogs
-            // 
-            this.Changelogs.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.Changelogs.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.Changelogs.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            this.Changelogs.Depth = 0;
-            this.Changelogs.HighEmphasis = true;
-            this.Changelogs.Icon = null;
-            this.Changelogs.Location = new System.Drawing.Point(1152, 320);
-            this.Changelogs.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.Changelogs.MouseState = MaterialSkin.MouseState.HOVER;
-            this.Changelogs.Name = "Changelogs";
-            this.Changelogs.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.Changelogs.Size = new System.Drawing.Size(121, 36);
-            this.Changelogs.TabIndex = 37;
-            this.Changelogs.Text = "Change logs";
-            this.Changelogs.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Text;
-            this.Changelogs.UseAccentColor = false;
-            this.Changelogs.UseVisualStyleBackColor = true;
-            this.Changelogs.Click += new System.EventHandler(this.Changelogs_Click);
-            // 
             // materialButton1
             // 
             this.materialButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -638,7 +618,9 @@
             // 
             this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
             this.pictureBox1.Location = new System.Drawing.Point(6, 75);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(1417, 236);
@@ -659,12 +641,53 @@
             this.WindowTitle.TabIndex = 51;
             this.WindowTitle.Text = "Launcher";
             // 
+            // materialButton6
+            // 
+            this.materialButton6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.materialButton6.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.materialButton6.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.materialButton6.Depth = 0;
+            this.materialButton6.HighEmphasis = true;
+            this.materialButton6.Icon = null;
+            this.materialButton6.Location = new System.Drawing.Point(1187, 320);
+            this.materialButton6.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.materialButton6.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialButton6.Name = "materialButton6";
+            this.materialButton6.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.materialButton6.Size = new System.Drawing.Size(86, 36);
+            this.materialButton6.TabIndex = 53;
+            this.materialButton6.Text = "Updates";
+            this.materialButton6.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Text;
+            this.materialButton6.UseAccentColor = false;
+            this.materialButton6.UseVisualStyleBackColor = true;
+            this.materialButton6.Click += new System.EventHandler(this.materialButton6_Click);
+            // 
+            // materialSwitch1
+            // 
+            this.materialSwitch1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.materialSwitch1.AutoSize = true;
+            this.materialSwitch1.Depth = 0;
+            this.materialSwitch1.Location = new System.Drawing.Point(477, 437);
+            this.materialSwitch1.Margin = new System.Windows.Forms.Padding(0);
+            this.materialSwitch1.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.materialSwitch1.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialSwitch1.Name = "materialSwitch1";
+            this.materialSwitch1.Ripple = true;
+            this.materialSwitch1.Size = new System.Drawing.Size(189, 37);
+            this.materialSwitch1.TabIndex = 54;
+            this.materialSwitch1.Text = "Light theme (Beta)";
+            this.materialSwitch1.UseVisualStyleBackColor = true;
+            this.materialSwitch1.Visible = false;
+            this.materialSwitch1.CheckedChanged += new System.EventHandler(this.materialSwitch1_CheckedChanged);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(1429, 736);
+            this.Controls.Add(this.materialSwitch1);
+            this.Controls.Add(this.materialButton6);
             this.Controls.Add(this.WindowTitle);
             this.Controls.Add(this.Launch);
             this.Controls.Add(this.pictureBox1);
@@ -679,7 +702,6 @@
             this.Controls.Add(this.cbVersion);
             this.Controls.Add(this.materialButton2);
             this.Controls.Add(this.materialButton1);
-            this.Controls.Add(this.Changelogs);
             this.Controls.Add(this.Pb_Progress);
             this.FormStyle = MaterialSkin.Controls.MaterialForm.FormStyles.ActionBar_None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -707,7 +729,6 @@
         private System.Windows.Forms.GroupBox groupBox3;
         private MaterialSkin.Controls.MaterialButton Launch;
         private MaterialSkin.Controls.MaterialProgressBar Pb_Progress;
-        private MaterialSkin.Controls.MaterialButton Changelogs;
         private MaterialSkin.Controls.MaterialButton materialButton1;
         private MaterialSkin.Controls.MaterialButton materialButton2;
         private MaterialSkin.Controls.MaterialComboBox cbVersion;
@@ -737,5 +758,7 @@
         private MaterialSkin.Controls.MaterialCheckbox launchLegacyMode;
         private PictureBox pictureBox1;
         private MaterialSkin.Controls.MaterialLabel WindowTitle;
+        private MaterialSkin.Controls.MaterialButton materialButton6;
+        private MaterialSkin.Controls.MaterialSwitch materialSwitch1;
     }
 }

@@ -21,20 +21,19 @@ namespace somsClient
             var skinManager = MaterialSkinManager.Instance;
             skinManager.AddFormToManage(this);
 
-            this.Text = String.Format("About {0}", AssemblyTitle);
-            this.labelProductName.Text = AssemblyProduct;
-            this.labelVersion.Text = String.Format("Version {0}", AssemblyVersion);
+            this.Text = String.Format("About {0}", ProductName);
+            this.labelProductName.Text = ProductName;
+            this.labelVersion.Text = String.Format("Version {0}", ProductVersion);
             this.labelCopyright.Text = AssemblyCopyright;
             this.labelCompanyName.Text = AssemblyCompany;
-            this.textBoxDescription.Text = AssemblyDescription;
 
             if (Environment.Is64BitOperatingSystem)
             {
-                this.windowsBuild.Text = new ComputerInfo().OSFullName + " (64-Bit)";
+                this.windowsBuild.Text = "OS: " + new ComputerInfo().OSFullName + " (64-Bit)";
             }
             else
             {
-                this.windowsBuild.Text = new ComputerInfo().OSFullName + " (32-Bit)";
+                this.windowsBuild.Text = "OS: " + new ComputerInfo().OSFullName + " (32-Bit)";
             }
         }
 
