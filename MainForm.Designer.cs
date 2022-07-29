@@ -46,13 +46,12 @@
             this.txtPath = new MaterialSkin.Controls.MaterialTextBox();
             this.materialButton3 = new MaterialSkin.Controls.MaterialButton();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.somsAnarchy = new MaterialSkin.Controls.MaterialRadioButton();
+            this.somsMain = new MaterialSkin.Controls.MaterialRadioButton();
+            this.materialLabel4 = new MaterialSkin.Controls.MaterialLabel();
             this.launchLegacyMode = new MaterialSkin.Controls.MaterialCheckbox();
-            this.materialLabel10 = new MaterialSkin.Controls.MaterialLabel();
-            this.materialLabel9 = new MaterialSkin.Controls.MaterialLabel();
             this.cbSkipHashCheck = new MaterialSkin.Controls.MaterialCheckbox();
             this.cbSkipAssetsDownload = new MaterialSkin.Controls.MaterialCheckbox();
-            this.rbSequenceDownload = new MaterialSkin.Controls.MaterialRadioButton();
-            this.rbParallelDownload = new MaterialSkin.Controls.MaterialRadioButton();
             this.Launch = new MaterialSkin.Controls.MaterialButton();
             this.Pb_Progress = new MaterialSkin.Controls.MaterialProgressBar();
             this.lbUsername = new MaterialSkin.Controls.MaterialLabel();
@@ -329,71 +328,89 @@
             // groupBox3
             // 
             this.groupBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox3.AutoSize = true;
             this.groupBox3.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.groupBox3.Controls.Add(this.somsAnarchy);
+            this.groupBox3.Controls.Add(this.somsMain);
+            this.groupBox3.Controls.Add(this.materialLabel4);
             this.groupBox3.Controls.Add(this.launchLegacyMode);
-            this.groupBox3.Controls.Add(this.materialLabel10);
-            this.groupBox3.Controls.Add(this.materialLabel9);
             this.groupBox3.Controls.Add(this.cbSkipHashCheck);
             this.groupBox3.Controls.Add(this.cbSkipAssetsDownload);
-            this.groupBox3.Controls.Add(this.rbSequenceDownload);
-            this.groupBox3.Controls.Add(this.rbParallelDownload);
-            this.groupBox3.Location = new System.Drawing.Point(1195, 377);
+            this.groupBox3.Location = new System.Drawing.Point(1195, 414);
             this.groupBox3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.groupBox3.Size = new System.Drawing.Size(227, 276);
+            this.groupBox3.Size = new System.Drawing.Size(227, 239);
             this.groupBox3.TabIndex = 27;
             this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Download Options";
+            this.groupBox3.Text = "Game Options";
+            // 
+            // somsAnarchy
+            // 
+            this.somsAnarchy.AutoSize = true;
+            this.somsAnarchy.Depth = 0;
+            this.somsAnarchy.Location = new System.Drawing.Point(15, 182);
+            this.somsAnarchy.Margin = new System.Windows.Forms.Padding(0);
+            this.somsAnarchy.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.somsAnarchy.MouseState = MaterialSkin.MouseState.HOVER;
+            this.somsAnarchy.Name = "somsAnarchy";
+            this.somsAnarchy.Ripple = true;
+            this.somsAnarchy.Size = new System.Drawing.Size(189, 37);
+            this.somsAnarchy.TabIndex = 53;
+            this.somsAnarchy.TabStop = true;
+            this.somsAnarchy.Text = "soms Anarchy (NEW!)";
+            this.somsAnarchy.UseVisualStyleBackColor = true;
+            // 
+            // somsMain
+            // 
+            this.somsMain.AutoSize = true;
+            this.somsMain.Checked = true;
+            this.somsMain.Depth = 0;
+            this.somsMain.Location = new System.Drawing.Point(15, 149);
+            this.somsMain.Margin = new System.Windows.Forms.Padding(0);
+            this.somsMain.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.somsMain.MouseState = MaterialSkin.MouseState.HOVER;
+            this.somsMain.Name = "somsMain";
+            this.somsMain.Ripple = true;
+            this.somsMain.Size = new System.Drawing.Size(162, 37);
+            this.somsMain.TabIndex = 52;
+            this.somsMain.TabStop = true;
+            this.somsMain.Text = "soms Main Server";
+            this.somsMain.UseVisualStyleBackColor = true;
+            // 
+            // materialLabel4
+            // 
+            this.materialLabel4.AutoSize = true;
+            this.materialLabel4.Depth = 0;
+            this.materialLabel4.Font = new System.Drawing.Font("Roboto Medium", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.materialLabel4.FontType = MaterialSkin.MaterialSkinManager.fontType.Subtitle2;
+            this.materialLabel4.Location = new System.Drawing.Point(15, 130);
+            this.materialLabel4.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel4.Name = "materialLabel4";
+            this.materialLabel4.Size = new System.Drawing.Size(42, 17);
+            this.materialLabel4.TabIndex = 51;
+            this.materialLabel4.Text = "Server";
             // 
             // launchLegacyMode
             // 
             this.launchLegacyMode.AutoSize = true;
             this.launchLegacyMode.Depth = 0;
-            this.launchLegacyMode.Location = new System.Drawing.Point(15, 219);
+            this.launchLegacyMode.Location = new System.Drawing.Point(15, 93);
             this.launchLegacyMode.Margin = new System.Windows.Forms.Padding(0);
             this.launchLegacyMode.MouseLocation = new System.Drawing.Point(-1, -1);
             this.launchLegacyMode.MouseState = MaterialSkin.MouseState.HOVER;
             this.launchLegacyMode.Name = "launchLegacyMode";
             this.launchLegacyMode.ReadOnly = false;
             this.launchLegacyMode.Ripple = true;
-            this.launchLegacyMode.Size = new System.Drawing.Size(199, 37);
+            this.launchLegacyMode.Size = new System.Drawing.Size(180, 37);
             this.launchLegacyMode.TabIndex = 50;
-            this.launchLegacyMode.Text = "Launch in legacy mode";
+            this.launchLegacyMode.Text = "Legacy mod support";
             this.launchLegacyMode.UseVisualStyleBackColor = true;
-            // 
-            // materialLabel10
-            // 
-            this.materialLabel10.AutoSize = true;
-            this.materialLabel10.Depth = 0;
-            this.materialLabel10.Font = new System.Drawing.Font("Roboto Medium", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel10.FontType = MaterialSkin.MaterialSkinManager.fontType.Subtitle2;
-            this.materialLabel10.Location = new System.Drawing.Point(15, 129);
-            this.materialLabel10.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel10.Name = "materialLabel10";
-            this.materialLabel10.Size = new System.Drawing.Size(89, 17);
-            this.materialLabel10.TabIndex = 49;
-            this.materialLabel10.Text = "More settings";
-            // 
-            // materialLabel9
-            // 
-            this.materialLabel9.AutoSize = true;
-            this.materialLabel9.Depth = 0;
-            this.materialLabel9.Font = new System.Drawing.Font("Roboto Medium", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel9.FontType = MaterialSkin.MaterialSkinManager.fontType.H6;
-            this.materialLabel9.Location = new System.Drawing.Point(15, 20);
-            this.materialLabel9.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel9.Name = "materialLabel9";
-            this.materialLabel9.Size = new System.Drawing.Size(145, 24);
-            this.materialLabel9.TabIndex = 48;
-            this.materialLabel9.Text = "Download Mode";
             // 
             // cbSkipHashCheck
             // 
             this.cbSkipHashCheck.AutoSize = true;
             this.cbSkipHashCheck.Depth = 0;
-            this.cbSkipHashCheck.Location = new System.Drawing.Point(15, 182);
+            this.cbSkipHashCheck.Location = new System.Drawing.Point(15, 56);
             this.cbSkipHashCheck.Margin = new System.Windows.Forms.Padding(0);
             this.cbSkipHashCheck.MouseLocation = new System.Drawing.Point(-1, -1);
             this.cbSkipHashCheck.MouseState = MaterialSkin.MouseState.HOVER;
@@ -409,7 +426,7 @@
             // 
             this.cbSkipAssetsDownload.AutoSize = true;
             this.cbSkipAssetsDownload.Depth = 0;
-            this.cbSkipAssetsDownload.Location = new System.Drawing.Point(15, 146);
+            this.cbSkipAssetsDownload.Location = new System.Drawing.Point(15, 20);
             this.cbSkipAssetsDownload.Margin = new System.Windows.Forms.Padding(0);
             this.cbSkipAssetsDownload.MouseLocation = new System.Drawing.Point(-1, -1);
             this.cbSkipAssetsDownload.MouseState = MaterialSkin.MouseState.HOVER;
@@ -420,39 +437,6 @@
             this.cbSkipAssetsDownload.TabIndex = 29;
             this.cbSkipAssetsDownload.Text = "Skip downloading";
             this.cbSkipAssetsDownload.UseVisualStyleBackColor = true;
-            // 
-            // rbSequenceDownload
-            // 
-            this.rbSequenceDownload.AutoSize = true;
-            this.rbSequenceDownload.Depth = 0;
-            this.rbSequenceDownload.Location = new System.Drawing.Point(15, 85);
-            this.rbSequenceDownload.Margin = new System.Windows.Forms.Padding(0);
-            this.rbSequenceDownload.MouseLocation = new System.Drawing.Point(-1, -1);
-            this.rbSequenceDownload.MouseState = MaterialSkin.MouseState.HOVER;
-            this.rbSequenceDownload.Name = "rbSequenceDownload";
-            this.rbSequenceDownload.Ripple = true;
-            this.rbSequenceDownload.Size = new System.Drawing.Size(104, 37);
-            this.rbSequenceDownload.TabIndex = 28;
-            this.rbSequenceDownload.TabStop = true;
-            this.rbSequenceDownload.Text = "Sequence";
-            this.rbSequenceDownload.UseVisualStyleBackColor = true;
-            // 
-            // rbParallelDownload
-            // 
-            this.rbParallelDownload.AutoSize = true;
-            this.rbParallelDownload.Checked = true;
-            this.rbParallelDownload.Depth = 0;
-            this.rbParallelDownload.Location = new System.Drawing.Point(15, 48);
-            this.rbParallelDownload.Margin = new System.Windows.Forms.Padding(0);
-            this.rbParallelDownload.MouseLocation = new System.Drawing.Point(-1, -1);
-            this.rbParallelDownload.MouseState = MaterialSkin.MouseState.HOVER;
-            this.rbParallelDownload.Name = "rbParallelDownload";
-            this.rbParallelDownload.Ripple = true;
-            this.rbParallelDownload.Size = new System.Drawing.Size(209, 37);
-            this.rbParallelDownload.TabIndex = 27;
-            this.rbParallelDownload.TabStop = true;
-            this.rbParallelDownload.Text = "Parallel (Recommended)";
-            this.rbParallelDownload.UseVisualStyleBackColor = true;
             // 
             // Launch
             // 
@@ -488,12 +472,12 @@
             // 
             // lbUsername
             // 
-            this.lbUsername.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbUsername.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lbUsername.AutoSize = true;
             this.lbUsername.Depth = 0;
             this.lbUsername.Font = new System.Drawing.Font("Roboto Medium", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
             this.lbUsername.FontType = MaterialSkin.MaterialSkinManager.fontType.Subtitle2;
-            this.lbUsername.Location = new System.Drawing.Point(1265, 40);
+            this.lbUsername.Location = new System.Drawing.Point(477, 458);
             this.lbUsername.MouseState = MaterialSkin.MouseState.HOVER;
             this.lbUsername.Name = "lbUsername";
             this.lbUsername.Size = new System.Drawing.Size(68, 17);
@@ -667,17 +651,16 @@
             this.materialSwitch1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.materialSwitch1.AutoSize = true;
             this.materialSwitch1.Depth = 0;
-            this.materialSwitch1.Location = new System.Drawing.Point(477, 437);
+            this.materialSwitch1.Location = new System.Drawing.Point(477, 414);
             this.materialSwitch1.Margin = new System.Windows.Forms.Padding(0);
             this.materialSwitch1.MouseLocation = new System.Drawing.Point(-1, -1);
             this.materialSwitch1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialSwitch1.Name = "materialSwitch1";
             this.materialSwitch1.Ripple = true;
-            this.materialSwitch1.Size = new System.Drawing.Size(189, 37);
+            this.materialSwitch1.Size = new System.Drawing.Size(185, 37);
             this.materialSwitch1.TabIndex = 54;
-            this.materialSwitch1.Text = "Light theme (Beta)";
+            this.materialSwitch1.Text = "Enable light mode";
             this.materialSwitch1.UseVisualStyleBackColor = true;
-            this.materialSwitch1.Visible = false;
             this.materialSwitch1.CheckedChanged += new System.EventHandler(this.materialSwitch1_CheckedChanged);
             // 
             // MainForm
@@ -749,10 +732,6 @@
         private MaterialSkin.Controls.MaterialTextBox TxtXmx;
         private MaterialSkin.Controls.MaterialTextBox txtXms;
         private MaterialSkin.Controls.MaterialTextBox Txt_JavaArgs;
-        private MaterialSkin.Controls.MaterialRadioButton rbSequenceDownload;
-        private MaterialSkin.Controls.MaterialRadioButton rbParallelDownload;
-        private MaterialSkin.Controls.MaterialLabel materialLabel10;
-        private MaterialSkin.Controls.MaterialLabel materialLabel9;
         private MaterialSkin.Controls.MaterialCheckbox cbSkipHashCheck;
         private MaterialSkin.Controls.MaterialCheckbox cbSkipAssetsDownload;
         private MaterialSkin.Controls.MaterialCheckbox launchLegacyMode;
@@ -760,5 +739,8 @@
         private MaterialSkin.Controls.MaterialLabel WindowTitle;
         private MaterialSkin.Controls.MaterialButton materialButton6;
         private MaterialSkin.Controls.MaterialSwitch materialSwitch1;
+        private MaterialSkin.Controls.MaterialLabel materialLabel4;
+        private MaterialSkin.Controls.MaterialRadioButton somsAnarchy;
+        private MaterialSkin.Controls.MaterialRadioButton somsMain;
     }
 }

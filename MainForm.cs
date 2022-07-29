@@ -121,34 +121,68 @@ namespace CmlLibWinFormSample
                 return;
             }
 
-            MineStat ms = new MineStat("soms.colebolebole.tk", 25565);
+            if (somsMain.Checked)
+            { MineStat ms = new MineStat("soms.colebolebole.tk", 25565);
 
-            if (ms.ServerUp)
-            {
-                setUIEnabled(false);
+                if (ms.ServerUp)
+                {
+                    setUIEnabled(false);
+                }
+                else
+                {
+                    MessageBox.Show("The soms Main server cannot be reached! Please try again later.");
+                    setUIEnabled(true);
+                    return;
+                }
+
             }
             else
             {
-                MessageBox.Show("The soms server cannot be reached! Please try again later.");
-                setUIEnabled(true);
-                return;
+                MineStat ms = new MineStat("soms-anarchy.colebolebole.tk", 25566);
+
+                if (ms.ServerUp)
+                {
+                    setUIEnabled(false);
+                }
+                else
+                {
+                    MessageBox.Show("The soms Anarchy server cannot be reached! Please try again later.");
+                    setUIEnabled(true);
+                    return;
+                }
             }
 
 
                 try
             {
                 // create LaunchOption
+
+                var mcServerIp = "";
+                var mcServerPort = "";
+
+                if (somsMain.Checked)
+                {
+                    mcServerIp = "soms.colebolebole.tk";
+                    mcServerPort = "25565";
+                }
+                else
+                {
+                    mcServerIp = "soms-anarchy.colebolebole.tk";
+                    mcServerPort = "25566";
+                }
+
                 var launchOption = new MLaunchOption()
+
                 {
                     MaximumRamMb = int.Parse(TxtXmx.Text),
                     Session = this.session,
 
                     GameLauncherName = "soms Client",
-                    GameLauncherVersion = "2022.7.22",
+                    GameLauncherVersion = "2022.7.29",
                     VersionType = "soms" + String.Format("_{0}", ProductVersion),
 
-                    ServerIp = "soms.colebolebole.tk",
-                    ServerPort = 25565,
+                    ServerIp = mcServerIp,
+                    ServerPort = int.Parse(mcServerPort),
 
                 };
 
@@ -161,13 +195,8 @@ namespace CmlLibWinFormSample
                 if (!string.IsNullOrEmpty(Txt_JavaArgs.Text))
                     launchOption.JVMArguments = Txt_JavaArgs.Text.Split(' ');
 
-                if (rbParallelDownload.Checked)
-                {
                     System.Net.ServicePointManager.DefaultConnectionLimit = 256;
                     launcher.FileDownloader = new AsyncParallelDownloader();
-                }
-                else
-                    launcher.FileDownloader = new SequenceDownloader();
 
                 if (cbSkipAssetsDownload.Checked)
                     launcher.GameFileCheckers.AssetFileChecker = null;
@@ -465,6 +494,11 @@ namespace CmlLibWinFormSample
             {
                 skinManager.Theme = MaterialSkinManager.Themes.DARK;
             }
+        }
+
+        private void materialRadioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
