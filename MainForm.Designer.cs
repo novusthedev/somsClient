@@ -354,10 +354,10 @@
             this.somsAnarchy.MouseState = MaterialSkin.MouseState.HOVER;
             this.somsAnarchy.Name = "somsAnarchy";
             this.somsAnarchy.Ripple = true;
-            this.somsAnarchy.Size = new System.Drawing.Size(189, 37);
+            this.somsAnarchy.Size = new System.Drawing.Size(136, 37);
             this.somsAnarchy.TabIndex = 53;
             this.somsAnarchy.TabStop = true;
-            this.somsAnarchy.Text = "soms Anarchy (NEW!)";
+            this.somsAnarchy.Text = "soms Anarchy";
             this.somsAnarchy.UseVisualStyleBackColor = true;
             // 
             // somsMain
@@ -371,10 +371,10 @@
             this.somsMain.MouseState = MaterialSkin.MouseState.HOVER;
             this.somsMain.Name = "somsMain";
             this.somsMain.Ripple = true;
-            this.somsMain.Size = new System.Drawing.Size(162, 37);
+            this.somsMain.Size = new System.Drawing.Size(135, 37);
             this.somsMain.TabIndex = 52;
             this.somsMain.TabStop = true;
-            this.somsMain.Text = "soms Main Server";
+            this.somsMain.Text = "soms Creative";
             this.somsMain.UseVisualStyleBackColor = true;
             // 
             // materialLabel4
