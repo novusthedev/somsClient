@@ -8,18 +8,18 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <SupportedOSPlatformVersion>8.0</SupportedOSPlatformVersion>
     <AssemblyName>somsClient</AssemblyName>
-    <Version>1.6</Version>
+    <Version>1.8</Version>
     <Description>soms Client is a good to use lightweight Minecraft client / launcher for Windows 8.1/10/11.
 soms Client supports a range of computers from older low end devices to newer high end ones.
 
 soms Client is free and open source, so fork it and create your own launcher!
 https://github.com/novusthedev/somsClient</Description>
     <PackageIcon>moanskull.png</PackageIcon>
-    <PackageReleaseNotes>updated the ui to include the homepage for the soms server and many bug fixes!</PackageReleaseNotes>
+    <PackageReleaseNotes>Updated backends</PackageReleaseNotes>
     <PlatformTarget>x86</PlatformTarget>
-    <BaseOutputPath>I:\Users\Novus\Documents\somsClient</BaseOutputPath>
+    <BaseOutputPath>C:\Users\Novus\Documents\somsClient</BaseOutputPath>
     <Platforms>AnyCPU;x86;x64</Platforms>
-    <Company>soms Staff Team</Company>
+    <Company>soms</Company>
     <PackageProjectUrl>https://github.com/novusthedev/somsClient</PackageProjectUrl>
     <RepositoryUrl>https://github.com/novusthedev/somsClient</RepositoryUrl>
     <Product>soms Client</Product>
@@ -34,10 +34,10 @@ https://github.com/novusthedev/somsClient</Description>
 
   <ItemGroup>
     <PackageReference Include="CmlLib.Core" Version="3.3.5" />
-    <PackageReference Include="CmlLib.Core.Auth.Microsoft" Version="2.0.1" />
-    <PackageReference Include="CmlLib.Core.Auth.Microsoft.UI.WinForm" Version="2.0.1" />
+    <PackageReference Include="CmlLib.Core.Auth.Microsoft" Version="2.2.0" />
+    <PackageReference Include="CmlLib.Core.Auth.Microsoft.UI.WinForm" Version="2.1.0" />
     <PackageReference Include="MaterialSkin.2" Version="2.3.1" />
-    <PackageReference Include="MineStat" Version="2.1.1" />
+    <PackageReference Include="MineStat" Version="3.0.1" />
   </ItemGroup>
 
 </Project>
