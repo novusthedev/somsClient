@@ -63,8 +63,8 @@
             this.Lv_Status = new MaterialSkin.Controls.MaterialLabel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.WindowTitle = new MaterialSkin.Controls.MaterialLabel();
-            this.materialButton6 = new MaterialSkin.Controls.MaterialButton();
             this.materialSwitch1 = new MaterialSkin.Controls.MaterialSwitch();
+            this.materialLabel9 = new MaterialSkin.Controls.MaterialLabel();
             materialLabel11 = new MaterialSkin.Controls.MaterialLabel();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -354,10 +354,10 @@
             this.somsAnarchy.MouseState = MaterialSkin.MouseState.HOVER;
             this.somsAnarchy.Name = "somsAnarchy";
             this.somsAnarchy.Ripple = true;
-            this.somsAnarchy.Size = new System.Drawing.Size(136, 37);
+            this.somsAnarchy.Size = new System.Drawing.Size(92, 37);
             this.somsAnarchy.TabIndex = 53;
             this.somsAnarchy.TabStop = true;
-            this.somsAnarchy.Text = "soms Anarchy";
+            this.somsAnarchy.Text = "Survival";
             this.somsAnarchy.UseVisualStyleBackColor = true;
             // 
             // somsMain
@@ -371,10 +371,10 @@
             this.somsMain.MouseState = MaterialSkin.MouseState.HOVER;
             this.somsMain.Name = "somsMain";
             this.somsMain.Ripple = true;
-            this.somsMain.Size = new System.Drawing.Size(135, 37);
+            this.somsMain.Size = new System.Drawing.Size(92, 37);
             this.somsMain.TabIndex = 52;
             this.somsMain.TabStop = true;
-            this.somsMain.Text = "soms Creative";
+            this.somsMain.Text = "Creative";
             this.somsMain.UseVisualStyleBackColor = true;
             // 
             // materialLabel4
@@ -401,9 +401,9 @@
             this.launchLegacyMode.Name = "launchLegacyMode";
             this.launchLegacyMode.ReadOnly = false;
             this.launchLegacyMode.Ripple = true;
-            this.launchLegacyMode.Size = new System.Drawing.Size(180, 37);
+            this.launchLegacyMode.Size = new System.Drawing.Size(130, 37);
             this.launchLegacyMode.TabIndex = 50;
-            this.launchLegacyMode.Text = "Legacy mod support";
+            this.launchLegacyMode.Text = "Legacy mods";
             this.launchLegacyMode.UseVisualStyleBackColor = true;
             // 
             // cbSkipHashCheck
@@ -417,9 +417,9 @@
             this.cbSkipHashCheck.Name = "cbSkipHashCheck";
             this.cbSkipHashCheck.ReadOnly = false;
             this.cbSkipHashCheck.Ripple = true;
-            this.cbSkipHashCheck.Size = new System.Drawing.Size(137, 37);
+            this.cbSkipHashCheck.Size = new System.Drawing.Size(140, 37);
             this.cbSkipHashCheck.TabIndex = 30;
-            this.cbSkipHashCheck.Text = "Skip file check";
+            this.cbSkipHashCheck.Text = "Skip all checks";
             this.cbSkipHashCheck.UseVisualStyleBackColor = true;
             // 
             // cbSkipAssetsDownload
@@ -433,9 +433,9 @@
             this.cbSkipAssetsDownload.Name = "cbSkipAssetsDownload";
             this.cbSkipAssetsDownload.ReadOnly = false;
             this.cbSkipAssetsDownload.Ripple = true;
-            this.cbSkipAssetsDownload.Size = new System.Drawing.Size(162, 37);
+            this.cbSkipAssetsDownload.Size = new System.Drawing.Size(148, 37);
             this.cbSkipAssetsDownload.TabIndex = 29;
-            this.cbSkipAssetsDownload.Text = "Skip downloading";
+            this.cbSkipAssetsDownload.Text = "Skip downloads";
             this.cbSkipAssetsDownload.UseVisualStyleBackColor = true;
             // 
             // Launch
@@ -625,27 +625,6 @@
             this.WindowTitle.TabIndex = 51;
             this.WindowTitle.Text = "Launcher";
             // 
-            // materialButton6
-            // 
-            this.materialButton6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.materialButton6.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.materialButton6.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            this.materialButton6.Depth = 0;
-            this.materialButton6.HighEmphasis = true;
-            this.materialButton6.Icon = null;
-            this.materialButton6.Location = new System.Drawing.Point(1187, 320);
-            this.materialButton6.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.materialButton6.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialButton6.Name = "materialButton6";
-            this.materialButton6.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.materialButton6.Size = new System.Drawing.Size(86, 36);
-            this.materialButton6.TabIndex = 53;
-            this.materialButton6.Text = "Updates";
-            this.materialButton6.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Text;
-            this.materialButton6.UseAccentColor = false;
-            this.materialButton6.UseVisualStyleBackColor = true;
-            this.materialButton6.Click += new System.EventHandler(this.materialButton6_Click);
-            // 
             // materialSwitch1
             // 
             this.materialSwitch1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
@@ -663,14 +642,29 @@
             this.materialSwitch1.UseVisualStyleBackColor = true;
             this.materialSwitch1.CheckedChanged += new System.EventHandler(this.materialSwitch1_CheckedChanged);
             // 
+            // materialLabel9
+            // 
+            this.materialLabel9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.materialLabel9.AutoSize = true;
+            this.materialLabel9.Depth = 0;
+            this.materialLabel9.Font = new System.Drawing.Font("Roboto Medium", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.materialLabel9.FontType = MaterialSkin.MaterialSkinManager.fontType.Subtitle2;
+            this.materialLabel9.Location = new System.Drawing.Point(9, 314);
+            this.materialLabel9.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel9.Name = "materialLabel9";
+            this.materialLabel9.Size = new System.Drawing.Size(864, 17);
+            this.materialLabel9.TabIndex = 55;
+            this.materialLabel9.Text = "soms Client has been discontinued and will no longer recieve updates in the futur" +
+    "e. Thanks for using soms Client when it was supported!";
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(1429, 736);
+            this.Controls.Add(this.materialLabel9);
             this.Controls.Add(this.materialSwitch1);
-            this.Controls.Add(this.materialButton6);
             this.Controls.Add(this.WindowTitle);
             this.Controls.Add(this.Launch);
             this.Controls.Add(this.pictureBox1);
@@ -737,10 +731,10 @@
         private MaterialSkin.Controls.MaterialCheckbox launchLegacyMode;
         private PictureBox pictureBox1;
         private MaterialSkin.Controls.MaterialLabel WindowTitle;
-        private MaterialSkin.Controls.MaterialButton materialButton6;
         private MaterialSkin.Controls.MaterialSwitch materialSwitch1;
         private MaterialSkin.Controls.MaterialLabel materialLabel4;
         private MaterialSkin.Controls.MaterialRadioButton somsAnarchy;
         private MaterialSkin.Controls.MaterialRadioButton somsMain;
+        private MaterialSkin.Controls.MaterialLabel materialLabel9;
     }
 }

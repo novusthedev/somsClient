@@ -4,9 +4,6 @@
     <Compile Update="AboutBox1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="GitHub.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Update="JavaForm.cs">
       <SubType>Form</SubType>
     </Compile>

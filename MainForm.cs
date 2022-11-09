@@ -474,13 +474,6 @@ namespace CmlLibWinFormSample
             txtXms.Text = min.ToString();
         }
 
-        private void materialButton6_Click(object sender, EventArgs e)
-        {
-            // github
-            var f = new GitHub();
-            f.Show();
-        }
-
         private void materialSwitch1_CheckedChanged(object sender, EventArgs e)
         {
 
